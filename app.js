@@ -11,7 +11,7 @@ function exibirTextoNaTela(tag, texto) {
      if ('speechSynthesis' in window) {
         let utterance = new SpeechSynthesisUtterance(texto);
         utterance.lang = 'pt-BR'; 
-        utterance.rate = 2.0; 
+        utterance.rate = 1.8; 
         window.speechSynthesis.speak(utterance); 
     } else {
         console.log("Web Speech API não suportada neste navegador.");
@@ -76,4 +76,5 @@ function reiniciarJogo() {
     tentativas = 1;
     exibirMensagemIncicial();
     document.getElementById('reiniciar').setAttribute('disabled', true);
+
 }
